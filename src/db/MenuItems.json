@@ -1,0 +1,17 @@
+[
+  {
+    "menuName": "Email",
+    "menuDestiny": "mailto:aminahmadydeveloper@gmail.com",
+    "key": "1001"
+  },
+  {
+    "menuName": "About Me",
+    "menuDestiny": "https://aminahmady.ir/",
+    "key": "1002"
+  },
+  {
+    "menuName": "Blog",
+    "menuDestiny": "https://aminahmady.vrigool.com",
+    "key": "1003"
+  }
+]
