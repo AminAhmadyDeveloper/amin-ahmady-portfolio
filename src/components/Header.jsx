@@ -36,7 +36,7 @@ export default function Header(props) {
             <SocialIcon
               bgColor="transparent"
               fgColor="#6e5494"
-              url="https://github.com/glenthemes/iconsax/tree/gh-pages/icons"
+              url="https://github.com/AminAhmadyDeveloper/amin-ahmady-portfolio"
             />
           </div>
         </div>

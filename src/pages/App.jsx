@@ -7,13 +7,9 @@ export default function App() {
       <Header />
       <Info
         name="Amin Ahmady"
-        describe="I'm Soheil Qorbani. I'm a curious person who wants to know
-            everything so they call me Full-stack developer 😀. I'm working with
-            newest front-end frameworks like React, Next and flutter. and for
-            the back-end I work with nodeJs, expressJs and firebase. I'm also a
-            mobile app developer I use kotlin and java for native android
-            development and flutter for both android and IOS. Thank you for your
-            interest 💛."
+        describe="In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual
+        form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before
+        final copy is available."
         cvAdress="https://bing.com"
       />
     </div>
