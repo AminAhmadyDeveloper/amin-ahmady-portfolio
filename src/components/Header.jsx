@@ -1,5 +1,5 @@
-import menuItems from "./../db/MenuItems.json";
-import { Sun, Menu, Polkadot } from "iconsax-react";
+import menuItems from "../db/MenuItems.json";
+import { Menu, Polkadot } from "iconsax-react";
 import { SocialIcon } from "react-social-icons";
 
 export default function Header(props) {
@@ -33,8 +33,6 @@ export default function Header(props) {
             </ul>
           </nav>
           <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
-            <Sun onClick={() => {}} cursor="pointer" />
-
             <SocialIcon
               bgColor="transparent"
               fgColor="#6e5494"

@@ -8,7 +8,7 @@
     "url": "https://aminahmady.ir"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -17,6 +17,7 @@
     "iconsax-react": "^0.0.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-responsive": "^9.0.0-beta.8",
     "react-social-icons": "^5.13.0",
     "styled-components": "^5.3.5"
   },
