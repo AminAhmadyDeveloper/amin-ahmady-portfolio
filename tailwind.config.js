@@ -2,12 +2,13 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: (_) => ({
-        "avatar": "url('./src/assets/images/amin.jpg')",
-      }),
-    },
-    colors: {
-      current: "#aa2b30",
+      colors: {
+        current: "#aa2b30",
+        header: "#d6d6d6"
+      },
+      backgroundImage: {
+        'bg-under': "url('/src/assets/images/under.png')",
+      }
     },
   },
   plugins: [],

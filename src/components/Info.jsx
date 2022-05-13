@@ -1,5 +1,6 @@
 import amin from "./../assets/images/amin.jpg";
 import CallToAction from "./CallToAction";
+import { DocumentDownload } from "iconsax-react";
 
 export default function Info(props) {
   return (
@@ -12,29 +13,38 @@ export default function Info(props) {
         />
 
         <div className="flex flex-col">
-          <p className="w-full  lg:w-auto mt-6 text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0 inline">
-            Hi There, I'm {props.name} <a className="hidden md:inline">👋</a>
-          </p>
+          <div className="inline text-justify">
+            <h1 className="w-full  lg:w-auto mt-6 text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0 block">
+              Hi There, I'm
+            </h1>
+            <h1 className="w-full  lg:w-auto mt-6 text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0 inline">
+              {props.name}
+            </h1>
+            <a className="hidden md:inline text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0">
+              👋
+            </a>
+          </div>
           <p className="w-full lg:w-auto mt-6 text-center lg:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0 md:hidden">
             👋
           </p>
           <p className="w-full lg:w-8/12 text-left text-sm mt-10 md:text-left lg:ml-8">
             {props.describe}
           </p>
+          <div className="w-full lg:w-6/12 flex flex-col md:flex-row mt-24 content-evenly justify-evenly lg:ml-10 text-center">
+            <CallToAction
+              title="Download CV"
+              url={props.cvAdress}
+              download="false"
+              icon={DocumentDownload}
+            />
+            <CallToAction
+              title="Contact Me"
+              url="#contact"
+              download="false"
+              bordered="true"
+            />
+          </div>
         </div>
-      </div>
-      <div className="w-full lg:w-6/12 flex flex-col md:flex-row mt-5 content-evenly justify-evenly lg:ml-10 text-center">
-        <CallToAction
-          title="Download CV"
-          url={props.cvAdress}
-          download="false"
-        />
-        <CallToAction
-          title="Contact Me"
-          url="#contact"
-          download="false"
-          bordered="true"
-        />
       </div>
     </div>
   );
