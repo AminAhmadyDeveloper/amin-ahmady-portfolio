@@ -11,9 +11,8 @@ export default function Info(props) {
           className="rounded-full w-full h-auto lg:w-7/12 md:w-6/12 my-auto relative overflow-hidden  hover:scale-105"
           draggable="false"
         />
-
         <div className="flex flex-col">
-          <div className="inline text-justify">
+          <div className="inline text-center md:text-left">
             <h1 className="w-full  lg:w-auto mt-6 text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0 block">
               Hi There, I'm
             </h1>
