@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./pages/App";
 import "./main.css";
 import { store } from "@risingstack/react-easy-state";
+import "devicon";
+
 const theme = store({
   theme: "light",
   changeTheme: () => {

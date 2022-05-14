@@ -45,3 +45,10 @@ h1 {
   -webkit-user-select: none;
   user-select: none;
 }
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+

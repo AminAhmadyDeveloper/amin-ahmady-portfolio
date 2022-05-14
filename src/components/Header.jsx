@@ -1,12 +1,13 @@
 import menuItems from "../db/MenuItems.json";
-import { Menu, Polkadot } from "iconsax-react";
+import { Menu } from "iconsax-react";
 import { SocialIcon } from "react-social-icons";
+import { VscodeOriginalIcon } from "react-devicons";
 
 export default function Header() {
   return (
     <div className="mx-8 relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
-      <div className="flex content-center justify-center">
-        <Polkadot className="h-auto mr-4" />
+      <div className="flex content-center justify-center items-center">
+        <VscodeOriginalIcon className="h-auto mr-4 text-4xl" />
         <div className="flex flex-col">
           <a className="font-bold noselect">Amin Ahmady</a>
           <a className="noselect">full stack developer</a>
