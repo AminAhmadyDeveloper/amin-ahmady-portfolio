@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "swiper/css";
 import skills from "../db/Skills.js";
+import openInNewTab from "./../utils/openInNewTab.jsx";
 
 const isMobileDevice = window.innerWidth <= 480;
 const isTabletDevice = window.innerWidth <= 768;
@@ -24,11 +25,11 @@ export default function Slider() {
       className="py-4"
     >
       {skills.map((skill, index) => (
-        <SwiperSlide key={index} className="hover:scale-105 mx-4 my-2 shadow-xl w-full md:w-5/12 lg:w-2/12 h-min border-2 rounded-lg flex flex-col items-center py-2 bg-gray-100">
+        <SwiperSlide onClick={()=> openInNewTab(skill.skillLink)} key={index} className="cursor-pointer hover:scale-105 mx-4 my-2 shadow-xl w-full md:w-5/12 lg:w-2/12 h-min border-2 rounded-lg flex flex-col items-center py-2 bg-gray-100">
           <skill.skillImage size="6rem" className="icon-dev" />
-          <a href={skill.skillLink} className="mt-4">
+          <p className="mt-4">
             {skill.skillName}
-          </a>
+          </p>
         </SwiperSlide>
       ))}
     </Swiper>

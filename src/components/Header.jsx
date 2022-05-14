@@ -9,8 +9,8 @@ export default function Header() {
       <div className="flex content-center justify-center items-center">
         <VscodeOriginalIcon className="h-auto mr-4 text-4xl" />
         <div className="flex flex-col">
-          <a className="font-bold noselect">Amin Ahmady</a>
-          <a className="noselect">full stack developer</a>
+          <a className="font-bold text-gray-900 noselect">Amin Ahmady</a>
+          <a className="noselect text-gray-900">full stack developer</a>
         </div>
       </div>
       <div className="flex items-center">
@@ -28,12 +28,12 @@ export default function Header() {
             <ul className="flex items-center space-x-8">
               {menuItems.map((menuItem) => (
                 <li key={menuItem.key}>
-                  <a href={menuItem.menuDestiny}>{menuItem.menuName}</a>
+                  <a className="text-gray-900" href={menuItem.menuDestiny}>{menuItem.menuName}</a>
                 </li>
               ))}
             </ul>
           </nav>
-          <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
+          <div className="flex items-center border-l border-gray-900 ml-6 pl-6">
             <SocialIcon
               bgColor="transparent"
               fgColor="#6e5494"
