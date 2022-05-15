@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "swiper/css";
-import skills from "../db/Skills.js";
+import skillsDB from "../db/Skills.db.js";
 import openInNewTab from "./../utils/openInNewTab.jsx";
 
 const isMobileDevice = window.innerWidth <= 480;
@@ -11,7 +11,7 @@ export default function Slider() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-      slidesPerView={isMobileDevice ? 2 : isTabletDevice ? 3 : 5}
+      slidesPerView={isMobileDevice ? 3 : isTabletDevice ? 5 : 10}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
@@ -22,14 +22,16 @@ export default function Slider() {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      className="py-4"
+      className="pb-4"
     >
-      {skills.map((skill, index) => (
-        <SwiperSlide onClick={()=> openInNewTab(skill.skillLink)} key={index} className="cursor-pointer hover:scale-105 mx-4 my-2 shadow-xl w-full md:w-5/12 lg:w-2/12 h-min border-2 rounded-lg flex flex-col items-center py-2 bg-gray-100">
+      {skillsDB.map((skill, index) => (
+        <SwiperSlide
+          onClick={() => openInNewTab(skill.skillLink)}
+          key={index}
+          className="max-w-sm cursor-pointer hover:scale-105 mx-2 my-3 shadow-xl border-2 rounded-lg flex flex-col items-center py-2 bg-gray-100"
+        >
           <skill.skillImage size="6rem" className="icon-dev" />
-          <p className="mt-4">
-            {skill.skillName}
-          </p>
+          <p className="mt-4">{skill.skillName}</p>
         </SwiperSlide>
       ))}
     </Swiper>

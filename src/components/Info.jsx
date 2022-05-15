@@ -1,22 +1,32 @@
 import amin from "./../assets/images/amin.jpg";
 import CallToAction from "./CallToAction";
 import { DocumentDownload } from "iconsax-react";
+import SkillIcons from "./../db/SkillsIcons";
 
 export default function Info(props) {
+  const allIcons = SkillIcons;
+  const randomIconNumer = Math.floor(Math.random() * allIcons.length);
+  const SelectedIcon = allIcons[randomIconNumer];
+
   return (
     <div>
       <div className="m-8 flex flex-col md:flex-row-reverse">
-        <img
-          src={amin}
-          className="rounded-full w-full h-auto lg:w-7/12 md:w-6/12 my-auto relative overflow-hidden  hover:scale-105"
-          draggable="false"
-        />
+        <div className="rounded-full w-full h-auto lg:w-7/12 md:w-6/12 my-auto relative ">
+          <img
+            src={amin}
+            draggable="false"
+            className="relative overflow-hidden  hover:scale-105 rounded-full"
+          />
+          <div className="bg-white rounded-full absolute visible md:hidden lg:block top-8 left-8 p-3 hover:animate-spin child:hover:animate-none">
+            <SelectedIcon size="42px" className="animate-pulse" />
+          </div>
+        </div>
         <div className="flex flex-col">
           <div className="inline text-center md:text-left">
-            <h1 className="w-full  lg:w-auto mt-6 text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0 block">
+            <h1 className=" name-header w-full  lg:w-auto mt-6 text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0 block">
               Hi There, I'm
             </h1>
-            <h1 className="w-full  lg:w-auto mt-6 text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0 inline">
+            <h1 className="w-full name-header lg:w-auto mt-6 text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0 inline">
               {props.name}
             </h1>
             <a className="hidden md:inline text-center md:text-left text-5xl lg:text-8xl lg:ml-8 lg:mt-0">

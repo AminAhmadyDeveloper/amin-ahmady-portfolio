@@ -14,10 +14,16 @@ body {
   height: 100%;
   background-size: cover;
   background-attachment: fixed;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 html {
   height: 100%;
+  -webkit-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 #root {
@@ -37,7 +43,16 @@ html {
 h1 {
   font-size: 2.5rem;
   font-weight: 600;
-  background-image: conic-gradient(#553c9a, #ee4b2b, #00c2cb, #553c9a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.name-header {
+  font-size: 2.5rem;
+  font-weight: 600;
+  background-image: conic-gradient(#0877b9, #1070b3);
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
@@ -51,4 +66,3 @@ h1 {
   width: 100%;
   height: 100%;
 }
-

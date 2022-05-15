@@ -13,7 +13,6 @@ import {
   CoffeescriptOriginalIcon,
   WebpackOriginalIcon,
   JavascriptOriginalIcon,
-  UbuntuPlainIcon,
   NodejsOriginalIcon,
   TypescriptOriginalIcon,
   BootstrapOriginalIcon,
@@ -24,6 +23,14 @@ import {
   WordpressOriginalIcon,
   KotlinOriginalIcon,
   JavaOriginalIcon,
+  DockerOriginalIcon,
+  KubernetesPlainIcon,
+  SpringOriginalIcon,
+  LinuxOriginalIcon,
+  Windows8OriginalIcon,
+  YarnOriginalIcon,
+  NpmOriginalWordmarkIcon,
+  TrelloPlainIcon,
 } from "react-devicons";
 
 export default [
@@ -31,6 +38,36 @@ export default [
     skillName: "VS Code",
     skillImage: VscodeOriginalIcon,
     skillLink: "https://code.visualstudio.com/",
+  },
+  {
+    skillName: "Docker",
+    skillImage: DockerOriginalIcon,
+    skillLink: "https://www.docker.com/",
+  },
+  {
+    skillName: "Yarn",
+    skillImage: YarnOriginalIcon,
+    skillLink: "https://yarnpkg.com/",
+  },
+  {
+    skillName: "Trello",
+    skillImage: TrelloPlainIcon,
+    skillLink: "https://trello.com/",
+  },
+  {
+    skillName: "NPM",
+    skillImage: NpmOriginalWordmarkIcon,
+    skillLink: "https://www.npmjs.com/",
+  },
+  {
+    skillName: "Spring",
+    skillImage: SpringOriginalIcon,
+    skillLink: "https://spring.io/",
+  },
+  {
+    skillName: "Kubernetes",
+    skillImage: KubernetesPlainIcon,
+    skillLink: "https://kubernetes.io/",
   },
   {
     skillName: "Atom",
@@ -108,8 +145,13 @@ export default [
     skillLink: "https://expressjs.com/",
   },
   {
-    skillName: "Ubuntu",
-    skillImage: UbuntuPlainIcon,
+    skillName: "Linux",
+    skillImage: LinuxOriginalIcon,
+    skillLink: "https://ubuntu.com/",
+  },
+  {
+    skillName: "Windows",
+    skillImage: Windows8OriginalIcon,
     skillLink: "https://ubuntu.com/",
   },
   {

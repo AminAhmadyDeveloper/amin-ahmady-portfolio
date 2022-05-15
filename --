@@ -1,0 +1,20 @@
+<p className="pt-1 pl-1">About 👉 Project Desc</p>
+              <ul className="list-none m-0 p-0 overflow-hidden">
+                <li className="float-left">
+                  <a className="p-2">Tag</a>
+                </li>
+                <li className="float-left">
+                  <a className="p-2">Tag</a>
+                </li>
+                <li className="float-left">
+                  <a className="p-2">Tag</a>
+                </li>
+                <li className="float-left">
+                  <a className="p-2">Tag</a>
+                </li>
+              </ul>
+              <p>Project Date</p>
+              <div className="inline">
+                <a>Refrence</a>
+                <a>WebSite</a>
+              </div>

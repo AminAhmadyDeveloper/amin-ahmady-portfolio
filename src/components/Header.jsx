@@ -2,6 +2,7 @@ import menuItems from "../db/MenuItems.json";
 import { Menu } from "iconsax-react";
 import { SocialIcon } from "react-social-icons";
 import { VscodeOriginalIcon } from "react-devicons";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -19,7 +20,6 @@ export default function Header() {
             type="button"
             className="text-slate-500 w-8 h-8 flex items-center justify-center hover:text-slate-600 dark:text-slate-400 dark:hover:text-slate-300"
           >
-            <span className="sr-only">Navigation</span>
             <Menu className="w-5 h-5" />
           </button>
         </div>
@@ -28,9 +28,14 @@ export default function Header() {
             <ul className="flex items-center space-x-8">
               {menuItems.map((menuItem) => (
                 <li key={menuItem.key}>
-                  <a className="text-gray-900" href={menuItem.menuDestiny}>{menuItem.menuName}</a>
+                  <a className="text-gray-900" href={menuItem.menuDestiny}>
+                    {menuItem.menuName}
+                  </a>
                 </li>
               ))}
+              <li>
+                <Link to="Info">Info</Link>
+              </li>
             </ul>
           </nav>
           <div className="flex items-center border-l border-gray-900 ml-6 pl-6">

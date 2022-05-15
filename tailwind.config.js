@@ -4,12 +4,23 @@ module.exports = {
     extend: {
       colors: {
         current: "#aa2b30",
-        header: "#d6d6d6"
+        header: "#d6d6d6",
+      },
+      screens: {
+        bw: "1024px",
+        lg: "1440px",
+        mbl: "425px",
+        md: "768px",
       },
       backgroundImage: {
-        'bg-under': "url('/src/assets/images/under.png')",
-      }
+        "bg-under": "url('/src/assets/images/under.png')",
+      },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+      addVariant("child-hover", "& > *:hover");
+    },
+  ],
 };
