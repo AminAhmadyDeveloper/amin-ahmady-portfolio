@@ -31,7 +31,7 @@ export default function Slider() {
           className="max-w-sm cursor-pointer hover:scale-105 mx-2 my-3 shadow-xl border-2 rounded-lg flex flex-col items-center py-2 bg-gray-100"
         >
           <skill.skillImage size="6rem" className="icon-dev" />
-          <p className="mt-4">{skill.skillName}</p>
+          <p className="mt-4 text-black">{skill.skillName}</p>
         </SwiperSlide>
       ))}
     </Swiper>

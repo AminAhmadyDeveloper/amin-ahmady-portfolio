@@ -33,9 +33,6 @@ export default function Header() {
                   </a>
                 </li>
               ))}
-              <li>
-                <Link to="Info">Info</Link>
-              </li>
             </ul>
           </nav>
           <div className="flex items-center border-l border-gray-900 ml-6 pl-6">
