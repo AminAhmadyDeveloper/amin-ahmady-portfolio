@@ -1,16 +1,16 @@
 import { useState } from "react";
 import ProjectsDB from "../db/Projects.db.js";
-import PostsCard from "./ProjectsCard.jsx";
+import ProjectsCard from "./ProjectsCard.jsx";
 
-export default function Posts({ scroll }) {
+export default function Posts({ scroll, onClick }) {
   const [currentProjects, setCurrentProjects] = useState(
     ProjectsDB.reverse().slice(0, 4)
   );
+
   return (
     <>
-      {currentProjects.map((project, index) => {
-        console.log(project);
-        return <PostsCard project={project} index={index} />;
+      {currentProjects?.map((project, index) => {
+        return <ProjectsCard key={index} project={project} onClick={onClick} />;
       })}
       <center>
         <button
@@ -21,9 +21,7 @@ export default function Posts({ scroll }) {
           } w-full border-current border-2 my-3 p-4 text-current rounded-lg md:w-6/12 lg:w-2/12 font-bold`}
           onClick={() => {
             setCurrentProjects(ProjectsDB.slice(0, currentProjects.length + 4));
-            setTimeout(function () {
-              scroll();
-            }, 10);
+            setTimeout(() => scroll(), 100);
           }}
         >
           Load More

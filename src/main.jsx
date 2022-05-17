@@ -4,6 +4,7 @@ import App from "./pages/App";
 import "./main.css";
 import { store } from "@risingstack/react-easy-state";
 import "devicon";
+import { RecoilRoot } from "recoil";
 
 const theme = store({
   theme: "light",
@@ -13,7 +14,9 @@ const theme = store({
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <App theme={theme} />
-  </React.StrictMode>
+  <RecoilRoot>
+    <React.StrictMode>
+      <App theme={theme} />
+    </React.StrictMode>
+  </RecoilRoot>
 );

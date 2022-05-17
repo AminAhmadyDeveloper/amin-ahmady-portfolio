@@ -24,7 +24,7 @@ export default function Slider() {
       }}
       className="pb-4"
     >
-      {skillsDB.map((skill, index) => (
+      {skillsDB?.map((skill, index) => (
         <SwiperSlide
           onClick={() => openInNewTab(skill.skillLink)}
           key={index}

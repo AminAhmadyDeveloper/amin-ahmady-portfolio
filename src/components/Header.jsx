@@ -2,7 +2,6 @@ import menuItems from "../db/MenuItems.json";
 import { Menu } from "iconsax-react";
 import { SocialIcon } from "react-social-icons";
 import { VscodeOriginalIcon } from "react-devicons";
-import { Link } from "react-router-dom";
 
 export default function Header() {
   return (

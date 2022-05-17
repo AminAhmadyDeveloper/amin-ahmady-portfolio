@@ -15,6 +15,9 @@ module.exports = {
       backgroundImage: {
         "bg-under": "url('/src/assets/images/under.png')",
       },
+      maxHeight: {
+        '75-vh': '75%',
+      }
     },
   },
   plugins: [

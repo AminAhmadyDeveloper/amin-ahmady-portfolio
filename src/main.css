@@ -24,6 +24,14 @@ html {
   height: 100%;
   -webkit-scroll-behavior: smooth;
   scroll-behavior: smooth;
+  -webkit-scrollbar-color: #6969dd #e0e0e0;
+  scrollbar-color: #6969dd #e0e0e0;
+  -webkit-scrollbar-width: thin;
+  scrollbar-width: thin;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 #root {
@@ -60,7 +68,6 @@ h1 {
   -webkit-user-select: none;
   user-select: none;
 }
-
 
 .swiper {
   width: 100%;

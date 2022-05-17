@@ -1,10 +1,17 @@
-export default function PostsCard({ project, index }) {
-  console.log(project);
+import projectState from "./../utils/projectState";
+import { useRecoilState } from "recoil";
+
+export default function ProjectsCard({ project, onClick }) {
+  const [thisProject, setThisProject] = useRecoilState(projectState);
+
   return (
     <div className="inline-block w-full md:w-6/12 lg:w-3/12 hover:scale-105 duration-500 p-2 align-top">
       <div
-        key={index}
         className="cursor-pointer my-4 mx-0 bg-white shadow-black/10 shadow-md rounded-xl "
+        onClick={() => {
+          setThisProject(project);
+          onClick();
+        }}
       >
         <div className="relative">
           <img
