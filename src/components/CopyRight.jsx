@@ -2,7 +2,7 @@ import { Copyright } from "iconsax-react";
 
 export default function CopyRight({ designer, developer }) {
   return (
-    <p className="text-header text-xs p-3 ">
+    <p className="text-gray-900 text-xs p-3 ">
       <Copyright className="w-5 h-5 inline mb-1" /> Designed WITH ❤️ By{" "}
       {designer} & Coded WITH ☕ BY <a>{developer}</a>
       <img

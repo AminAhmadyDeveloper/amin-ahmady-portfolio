@@ -31,6 +31,7 @@
     "react-router-dom": "^6.3.0",
     "react-social-icons": "^5.13.0",
     "react-spring": "^9.4.5",
+    "react-vertical-timeline-component": "^3.5.2",
     "recoil": "^0.7.3-alpha.2",
     "styled-components": "^5.3.5",
     "swiper": "^8.1.4"
