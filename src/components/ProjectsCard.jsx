@@ -15,7 +15,7 @@ export default function ProjectsCard({ project, onClick }) {
       >
         <div className="relative">
           <img
-            src={project.projectImage}
+            src={project.projectTumb}
             alt={project.projectName}
             className="h-[320px] md:h-[420px] lg:h-[530px] w-full rounded-xl relative left-0 top-0 object-center overflow-hidden object-cover"
           />

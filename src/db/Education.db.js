@@ -1,16 +1,22 @@
-import { Activity } from "iconsax-react";
+import { DocumentLike, DocumentText } from "iconsax-react";
 
 export default [
   {
-    title: "Title",
-    subTitle: "Sub Title",
-    desc: "Wrote my first blog post ever on Medium Wrote my first blog post ever on Medium Wrote my first blog post ever on Medium",
-    date: "March 03 2017",
-    tag:"",
+    title: "7 Learn Flutter Expert",
+    subTitle: "Teacher: Saeed Shahini",
+    desc: "Theacher Of This Course Is A senior Mobile Developer For Too Many Iranian Big Companies Like Digikala.com And Telewebion.ir",
+    date: "Feb 2022 - Now",
     link: {
-      url: "https://medium.com/@popflorin1705/javascript-coding-challenge-1-6d9c712963d2",
-      text: "See Grade",
+      url: "https://7learn.com/course/flutter-expert",
+      text: "Course Link",
     },
-    icon: Activity
+    icon: DocumentLike,
+  },
+  {
+    title: "Software Engineer",
+    subTitle: "Payame Noor Shabestar University",
+    desc: "I'm Bachelor Student Of Sofware Engineering in Shabestar Payame Noor University",
+    date: "2022 - Now",
+    icon: DocumentText,
   },
 ];

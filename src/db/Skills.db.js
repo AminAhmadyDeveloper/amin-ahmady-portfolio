@@ -10,27 +10,23 @@ import {
   BitbucketOriginalIcon,
   VuejsOriginalIcon,
   ExpressOriginalIcon,
-  CoffeescriptOriginalIcon,
   WebpackOriginalIcon,
   JavascriptOriginalIcon,
   NodejsOriginalIcon,
   TypescriptOriginalIcon,
-  BootstrapOriginalIcon,
   NextjsOriginalIcon,
   MongodbOriginalIcon,
   MysqlOriginalIcon,
-  OracleOriginalIcon,
   WordpressOriginalIcon,
   KotlinOriginalIcon,
   JavaOriginalIcon,
-  DockerOriginalIcon,
-  KubernetesPlainIcon,
-  SpringOriginalIcon,
   LinuxOriginalIcon,
   Windows8OriginalIcon,
   YarnOriginalIcon,
   NpmOriginalWordmarkIcon,
   TrelloPlainIcon,
+  GatsbyOriginalIcon,
+  PythonOriginalIcon,
 } from "react-devicons";
 
 export default [
@@ -40,14 +36,14 @@ export default [
     skillLink: "https://code.visualstudio.com/",
   },
   {
-    skillName: "Docker",
-    skillImage: DockerOriginalIcon,
-    skillLink: "https://www.docker.com/",
-  },
-  {
     skillName: "Yarn",
     skillImage: YarnOriginalIcon,
     skillLink: "https://yarnpkg.com/",
+  },
+  {
+    skillName: "Python",
+    skillImage: PythonOriginalIcon,
+    skillLink: "https://www.python.org/",
   },
   {
     skillName: "Trello",
@@ -58,16 +54,6 @@ export default [
     skillName: "NPM",
     skillImage: NpmOriginalWordmarkIcon,
     skillLink: "https://www.npmjs.com/",
-  },
-  {
-    skillName: "Spring",
-    skillImage: SpringOriginalIcon,
-    skillLink: "https://spring.io/",
-  },
-  {
-    skillName: "Kubernetes",
-    skillImage: KubernetesPlainIcon,
-    skillLink: "https://kubernetes.io/",
   },
   {
     skillName: "Atom",
@@ -125,11 +111,6 @@ export default [
     skillLink: "https://www.typescriptlang.org/",
   },
   {
-    skillName: "Coffe Script",
-    skillImage: CoffeescriptOriginalIcon,
-    skillLink: "https://coffeescript.org/",
-  },
-  {
     skillName: "Webpack",
     skillImage: WebpackOriginalIcon,
     skillLink: "https://webpack.js.org/",
@@ -160,9 +141,9 @@ export default [
     skillLink: "https://nextjs.org/",
   },
   {
-    skillName: "Bootsrap",
-    skillImage: BootstrapOriginalIcon,
-    skillLink: "https://getbootstrap.com/",
+    skillName: "Gatsby",
+    skillImage: GatsbyOriginalIcon,
+    skillLink: "https://www.gatsbyjs.com/",
   },
   {
     skillName: "Mongo DB",
@@ -173,11 +154,6 @@ export default [
     skillName: "My SQL",
     skillImage: MysqlOriginalIcon,
     skillLink: "https://www.mysql.com/",
-  },
-  {
-    skillName: "Oracle DB",
-    skillImage: OracleOriginalIcon,
-    skillLink: "https://www.oracle.com/uk/database/",
   },
   {
     skillName: "Java",

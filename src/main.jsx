@@ -5,6 +5,7 @@ import "./main.css";
 import { store } from "@risingstack/react-easy-state";
 import "devicon";
 import { RecoilRoot } from "recoil";
+import "react-image-gallery/styles/css/image-gallery.css"
 
 const theme = store({
   theme: "light",

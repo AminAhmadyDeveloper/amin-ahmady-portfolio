@@ -1,56 +1,40 @@
 import {
-  AndroidOriginalIcon,
-  AppleOriginalIcon,
-  ChromeOriginalIcon,
-  FirefoxOriginalIcon,
-  FlutterOriginalIcon,
-  KotlinOriginalIcon,
+  Css3OriginalIcon,
+  GithubOriginalIcon,
+  Html5OriginalIcon,
+  JavascriptOriginalIcon,
+  NodejsOriginalIcon,
+  ReactOriginalIcon,
+  TailwindcssPlainIcon,
 } from "react-devicons";
+import portofilio from "./../assets/images/portofilio.jpeg";
 
 export default [
   {
-    projectName: "Ice-watch online shop",
+    projectName: "Personal Profilito Project",
     projectDesc:
-      "Design, implement and maintain Ice-watch online shop android app",
-    projectImage:
-      "https://soheilqk.github.io/images/portfolio/icewatchapp/ice-1.png",
-    projectLink: "http://icewatch-iran.ir/",
-    projectSkills: ["Kotlin", "Android", "Retfrofit"],
-    projectIcons: [KotlinOriginalIcon, AndroidOriginalIcon],
-  },
-  {
-    projectName: "Tusnar psychology test",
-    projectDesc: "Design, implement Tusnar psychology test android app.esign, implement Tusnar psychology test android app.esign, implement Tusnar psychology test android app.esign, implement Tusnar psychology test android app.esign, implement Tusnar psychology test android app.esign, implement Tusnar psychology test android app.",
-    projectImage:
-      "https://soheilqk.github.io/images/portfolio/tusnar/tusnar-1.jpg",
-    projectLink: "https://cafebazaar.ir/app/com.sqk.tosnar?l=en",
-    projectSkills: ["Kotlin", "Android", "Retfrofit"],
-    projectIcons: [KotlinOriginalIcon, AndroidOriginalIcon],
-  },
-  {
-    projectName: "video call service",
-    projectDesc:
-      "Design, implement video call service for a doctor visit booking android app.",
-    projectImage:
-      "https://soheilqk.github.io/images/portfolio/shafadoc/shafadoc.png",
-    projectLink: "https://cafebazaar.ir/app/com.sqk.tosnar?l=en",
-    projectSkills: [
-      "Flutter",
-      "Provider",
-      "Hive",
-      "Flutter",
-      "Provider",
-      "Hive",
-      "Flutter",
-      "Provider",
-      "Hive",
+      "Programming a Profilito project using react and recoil state manager Tailwind css framework, the web site you see right now",
+    projectTumb: portofilio,
+    projectImages: [
+      {
+        original: portofilio,
+        thumbnail: portofilio,
+      },
+      {
+        original: portofilio,
+        thumbnail: portofilio,
+      },
     ],
+    projectLink: "http://aminahmadydeveloper.github.io/",
+    projectSkills: ["React", "Recoil", "Tailwind", "CSS3", "HTML5"],
     projectIcons: [
-      FlutterOriginalIcon,
-      AndroidOriginalIcon,
-      AppleOriginalIcon,
-      ChromeOriginalIcon,
-      FirefoxOriginalIcon,
+      ReactOriginalIcon,
+      TailwindcssPlainIcon,
+      NodejsOriginalIcon,
+      JavascriptOriginalIcon,
+      Html5OriginalIcon,
+      Css3OriginalIcon,
+      GithubOriginalIcon,
     ],
   },
 ];
