@@ -1,33 +1,19 @@
-import { ArrowLeft2, ArrowRight, ArrowRight2, CloseSquare, Star } from "iconsax-react";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleModal } from "./../providers/modalSlice";
+import { ArrowLeft2, ArrowRight2, CloseSquare, Star } from "iconsax-react";
 import openInNewTab from "../utils/openInNewTab";
 import ImageGallery from "react-image-gallery";
 
-const images = [
-  {
-    original: "https://soheilqk.github.io/images/portfolio/tusnar/tusnar-1.jpg",
-    thumbnail: "https://picsum.photos/id/1018/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1015/1000/600/",
-    thumbnail: "https://picsum.photos/id/1015/250/150/",
-  },
-  {
-    original: "https://picsum.photos/id/1019/1000/600/",
-    thumbnail: "https://picsum.photos/id/1019/250/150/",
-  },
-];
+export default function ProjectModal() {
+  const dispatch = useDispatch();
+  const project = useSelector((state) => state.project.value);
+  const modal = useSelector((state) => state.modal);
 
-export default function ProjectModal({
-  project,
-  showModal,
-  toggleModal,
-  toggleScroll,
-}) {
   return (
     <div
       style={{ top: window.pageYOffset }}
       className={`w-full h-screen fixed left-0 bg-black/70 flex z-20   ${
-        showModal == true ? "block" : "hidden"
+        modal.modal == true ? "block" : "hidden"
       }`}
     >
       <div className="bg-white h-5/6s m-6 p-4 rounded-lg flex flex-col lg:w-5/12 show ">
@@ -35,42 +21,47 @@ export default function ProjectModal({
           <div className="flex flex-col md:flex-row">
             <h3>{project.projectName}</h3>
             <div className="flex rounded-full p-2 mx-2 w-fit">
-              {project.projectIcons?.map((icon) => {
+              {project.projectIcons?.map((icon, index) => {
                 const Icon = icon;
                 return (
-                  <>
-                    <Icon
-                      className="w-full h-full justify-center items-center content-center mx-1"
-                      size="0.8em"
-                    />
-                  </>
+                  <Icon
+                    key={index}
+                    className="w-full h-full justify-center items-center content-center mx-1"
+                    size="0.8em"
+                  />
                 );
               })}
             </div>
           </div>
           <CloseSquare
             className="cursor-pointer"
-            onClick={() => {
-              toggleModal();
-              toggleScroll();
-            }}
+            onClick={() => dispatch(toggleModal())}
           />
         </div>
 
         <div className="rounded-lg mt-4 overflow-y-auto flex flex-col w-full">
           <div className=" w-fit flex justify-center self-center rounded-lg">
             <ImageGallery
-              items={project.projectImages?? []}
+              items={project.projectImages ?? []}
               showFullscreenButton={false}
               showPlayButton={false}
               showThumbnails={false}
               additionalClass="slider-image"
-
               renderLeftNav={(onClick, disabled) => (
-                <ArrowLeft2 className="image-gallery-icon top-[45%]" size={48} onClick={onClick} disabled={disabled} />
+                <ArrowLeft2
+                  className="image-gallery-icon top-[45%]"
+                  size={48}
+                  onClick={onClick}
+                  disabled={disabled}
+                />
               )}
               renderRightNav={(onClick, disabled) => (
-                <ArrowRight2 className="image-gallery-icon top-[45%] right-0" size={48} onClick={onClick} disabled={disabled} />
+                <ArrowRight2
+                  className="image-gallery-icon top-[45%] right-0"
+                  size={48}
+                  onClick={onClick}
+                  disabled={disabled}
+                />
               )}
             />
           </div>
@@ -78,9 +69,12 @@ export default function ProjectModal({
             {"About Project 👉 " + project.projectDesc}
           </p>
           <div className="my-3">
-            {project.projectSkills?.map((skill) => {
+            {project.projectSkills?.map((skill, index) => {
               return (
-                <a className="bg-gray-900 text-white rounded-md px-3 w-fit mx-1 py-1 my-1 justify-center content-center items-center inline-flex">
+                <a
+                  key={index}
+                  className="bg-gray-900 text-white rounded-md px-3 w-fit mx-1 py-1 my-1 justify-center content-center items-center inline-flex"
+                >
                   <Star size={16} className="mr-2" />
                   {skill}
                 </a>

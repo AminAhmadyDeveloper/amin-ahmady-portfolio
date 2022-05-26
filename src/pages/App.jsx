@@ -1,41 +1,24 @@
+import { useRef } from "react";
+import { VerticalTimeline } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+
 import Header from "../components/Header";
 import Info from "./../components/Info";
 import Slider from "./../components/Slider";
 import Projects from "../components/Projects";
-import { useRef, useState } from "react";
-import BackGroundOfSections from "../components/BackGroundOfSections";
-import CopyRight from "../components/CopyRight";
-import ProjectModal from "./ProjectModal";
-import { selector, useRecoilValue } from "recoil";
-import projectState from "./../utils/projectState";
-import { VerticalTimeline } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
-import EducationDB from "./../db/Education.db";
 import EducationItem from "../components/EducationItem";
+import CopyRight from "../components/CopyRight";
+import BackGroundOfSections from "../components/BackGroundOfSections";
+import ProjectModal from "./ProjectModal";
+import EducationDB from "./../db/Education.db";
 
 export default function App() {
   const projectsRef = useRef(null);
   const executeScroll = () => projectsRef.current.scrollIntoView();
-  const [scroll, setSroll] = useState("hidden");
-  const [showModal, setshowModal] = useState(false);
-  const toggleScroll = () => {
-    scroll === "hidden" ? setSroll("auto") : setSroll("hidden");
-    document.body.style.overflow = scroll;
-  };
-  const toggleModal = () => setshowModal(!showModal);
-  const thisProjectState = selector({
-    key: "thisProjectState",
-    get: ({ get }) => get(projectState),
-  });
 
   return (
     <div>
-      <ProjectModal
-        showModal={showModal}
-        toggleModal={toggleModal}
-        toggleScroll={toggleScroll}
-        project={useRecoilValue(thisProjectState)}
-      />
+      <ProjectModal />
       <div className="select-none relative">
         <Header />
         <div className="h-5/6">
@@ -52,15 +35,7 @@ export default function App() {
         <BackGroundOfSections
           title="PROJECTS"
           padded={true}
-          child={
-            <Projects
-              scroll={executeScroll}
-              onClick={() => {
-                toggleScroll();
-                toggleModal();
-              }}
-            />
-          }
+          child={<Projects scroll={executeScroll} />}
         />
         <BackGroundOfSections
           title="EDUCATION"
@@ -68,8 +43,8 @@ export default function App() {
           dark={true}
           child={
             <VerticalTimeline>
-              {EducationDB?.map((edu) => {
-                return <EducationItem edu={edu}/>;
+              {EducationDB?.map((edu, index) => {
+                return <EducationItem key={index} edu={edu} />;
               })}
             </VerticalTimeline>
           }
